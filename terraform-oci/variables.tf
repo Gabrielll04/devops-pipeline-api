@@ -3,6 +3,11 @@ variable "region" {
   type        = string
 }
 
+variable "compartment_ocid" {
+  description = "Compartment OCID"
+  type = string
+}
+
 variable "tenancy_ocid" {
   description = "Tenancy OCID"
   type        = string
@@ -21,4 +26,9 @@ variable "fingerprint" {
 variable "private_key_path" {
   description = "Path to OCI API private key"
   type        = string
+}
+
+variable "ssh_public_key_path" {
+  description = "Path to SSH public key"
+  type = string
 }

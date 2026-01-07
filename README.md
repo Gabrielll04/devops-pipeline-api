@@ -13,7 +13,7 @@ This project solves these issues by providing a fully automated DevOps pipeline.
 ## Features
 - Simple Go API with /health endpoint
 - Multi stage build using distroless Docker images for easy deployment
-- Terraform scripts for OCI infrastructure (planned)
+- Terraform scripts for OCI infrastructure
 - CI/CD pipeline using GitHub Actions (planned)
 - Monitoring with Prometheus and Grafana (planned)
 

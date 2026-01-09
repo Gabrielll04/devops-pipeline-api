@@ -1,0 +1,26 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+      - name: Build binary
+        run: |
+          GOOS=linux GOARCH=amd64 go build -o app
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.OCI_VM_IP }}
+          username: opc
+          key: ${{ secrets.OCI_SSH_KEY }}
+          script: |
+            sudo systemctl stop app || true
+            sudo mv /home/opc/app /home/opc/app.old || true
+            sudo cp app /home/opc/app
+            sudo systemctl start app

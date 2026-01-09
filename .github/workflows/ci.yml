@@ -6,19 +6,18 @@ on:
         branches: [ "main" ]
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        strategy:
-            matrix:
-                go-version: ['1.22.x']
+  build:
+    runs-on: ubuntu-latest
 
-        steps:
-            - uses: actions/checkout@v5
-            - name: Setup Go
-              uses: actions/setup-go@v5
-              with:
-                go-version: '1.22.x'
-            - name: Build
-              run: go build -v ./...
-            - name: Test with Go CLI 
-              run: go test
+    steps:
+      - uses: actions/checkout@v5
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22.x'
+      - name: Build
+        working-directory: simple-api
+        run: go build -v ./...
+      - name: Test
+        working-directory: simple-api
+        run: go test ./...

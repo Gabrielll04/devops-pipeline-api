@@ -35,7 +35,7 @@ jobs:
           key: ${{ secrets.OCI_SSH_KEY }}
           script: |
             sudo systemctl stop app || true
-            sudo mv /home/ubuntu/app /home/ubuntu/app.old || true
-            sudo mv /home/ubuntu/app /usr/local/bin/app
+            sudo mv /usr/local/bin/app /usr/local/bin/app.old || true
+            sudo mv /home/ubuntu/simple-api/app /usr/local/bin/app
             sudo chmod +x /usr/local/bin/app
             sudo systemctl start app

@@ -39,6 +39,9 @@ write_files:
       }
 
 runcmd:
+  - iptables -I INPUT 5 -m state --state NEW -p tcp --dport 80 -j ACCEPT
+  - iptables -I INPUT 5 -m state --state NEW -p tcp --dport 443 -j ACCEPT
+  - netfilter-persistent save
   - ln -s /etc/nginx/sites-available/simple-api /etc/nginx/sites-enabled/simple-api
   - rm -f /etc/nginx/sites-enabled/default
   - systemctl daemon-reload

@@ -19,4 +19,9 @@ resource "oci_core_security_list" "public" {
       max = 80
     }
   }
+
+  egress_security_rules {
+    protocol    = "all"
+    destination = "0.0.0.0/0"
+  }
 }

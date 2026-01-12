@@ -9,3 +9,8 @@ variable "vcn_cidr" {
 variable "subnet_cidr" {
     type = string
 }
+
+variable "security_list_ids" {
+    description = "Security Lists attached to subnet"
+    type        = list(string)
+}

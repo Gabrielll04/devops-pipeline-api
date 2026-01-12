@@ -25,5 +25,6 @@ resource "oci_core_subnet" "this" {
     vcn_id         = oci_core_vcn.this.id
     cidr_block     = var.subnet_cidr
     route_table_id = oci_core_route_table.this.id
+    security_list_ids = var.security_list_ids
     prohibit_public_ip_on_vnic = false
 }

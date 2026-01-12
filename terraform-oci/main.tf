@@ -1,8 +1,11 @@
 module "network" {
-    source           = "./modules/network"
-    compartment_ocid = var.compartment_ocid
-    vcn_cidr         = "10.0.0.0/16"
-    subnet_cidr      = "10.0.1.0/24"
+    source            = "./modules/network"
+    compartment_ocid  = var.compartment_ocid
+    vcn_cidr          = "10.0.0.0/16"
+    subnet_cidr       = "10.0.1.0/24"
+    security_list_ids = [
+        module.security.public_security_list_id
+    ]
 }
 
 module "security" {

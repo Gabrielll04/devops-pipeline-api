@@ -13,11 +13,17 @@ Deploying even a simple API can be error-prone and time-consuming if done manual
 This project solves these issues by providing a fully automated DevOps pipeline.
 
 ## Features
-- Simple Go API with /health endpoint
-- Multi stage build using distroless Docker images for easy deployment
-- Terraform scripts for OCI infrastructure
-- CI/CD pipeline using GitHub Actions
-- Monitoring with Prometheus and Grafana (planned)
+
+- Simple Go API with a `/health` endpoint
+- Multi-stage Docker build using **distroless images**
+- Infrastructure provisioning with **Terraform** on OCI
+- CI/CD pipeline using **GitHub Actions**
+- VM-based deployment model (no Kubernetes)
+
+> ⚠️ **Observability Note**
+>
+> This project currently **does not include observability (Prometheus/Grafana)**. Monitoring may be added in the future, but it is intentionally out of scope for now to keep the project focused on core deployment and infrastructure concepts.
+
 
 ## Architecture
 wip

@@ -2,7 +2,9 @@
 
 ## About
 
-This project provides a template infrastructure for a simple API written in Go,deployed on OCI (Oracle Cloud Infrastructure). It demonstrates a complete DevOps workflow including CI/CD, Docker containerization, and Terraform-based infrastructure provisioning.
+This project provides a reference DevOps infrastructure for deploying a simple Go-based API on OCI (Oracle Cloud Infrastructure). The goal is to demonstrate how a small service can be built, packaged, and deployed using **industry-standard DevOps practices**, without unnecessary complexity.
+
+Rather than focusing on advanced platform abstractions (like Kubernetes), this project prioritizes **clarity, reproducibility, and VM-based infrastructure**, which is still very common in real-world environments.
 
 ## Problem Statement
 

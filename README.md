@@ -43,10 +43,12 @@ Compute VM
 systemd service (Go API)
 ```
 
-## Getting Started
-wip
+## Future Improvements (Optional)
 
-## Future improvements
-- Kubernetes (OKE) 
-- Terraform pipelines (tfstate on S3 for example)
-- Multi-branch pipelines
+These are **not required** for the project to be useful, but represent natural next steps:
+
+- Basic observability (Prometheus / Grafana)
+- Kubernetes (OKE) as an alternative deployment model
+- Remote Terraform state (OCI Object Storage / S3-compatible)
+- Multi-environment and multi-branch pipelines
+- Configuration management (Ansible or similar)

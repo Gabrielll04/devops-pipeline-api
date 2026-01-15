@@ -26,7 +26,22 @@ This project solves these issues by providing a fully automated DevOps pipeline.
 
 
 ## Architecture
-wip
+
+**Current (simplified):**
+
+```
+Developer
+   ↓
+GitHub (code + pipeline)
+   ↓
+GitHub Actions (CI/CD)
+   ↓
+Terraform (OCI)
+   ↓
+Compute VM
+   ↓
+systemd service (Go API)
+```
 
 ## Getting Started
 wip
